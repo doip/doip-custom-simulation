@@ -1,0 +1,45 @@
+plugins {
+	id 'java-library'
+	id 'distribution'
+	id 'maven'
+	id 'eclipse'
+}
+
+group = 'com.github.doip'
+version = '1.0.0'
+
+repositories {
+	jcenter()
+	maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+	implementation 'com.github.doip:doip-simulation:1.0.3'
+	implementation 'com.github.doip:doip-library:1.0.1'
+	implementation 'com.github.doip:doip-logging:1.1.5'
+
+	testImplementation 'com.github.doip:doip-junit:1.0.6'
+	testImplementation 'junit:junit:4.12'
+}
+
+jar {
+	manifest {
+		attributes (
+			'Main-Class' : 'doip.custom.simulation.Main',
+			'Class-Path' : configurations.runtimeClasspath.collect { it.getName() }.join(' ')
+		)
+	}
+}
+
+distributions {
+	main {
+		contents {
+			into ('libs') {
+				from (jar)
+				from (configurations.runtimeClasspath)
+			}
+		}
+	}
+}
+
+

@@ -1,0 +1,22 @@
+# This file defines request/response pairs for UDS messages
+# Request and response are separated by a colon (:)
+# Spaces can be added between the characters, they will
+# be removed by the software before evaluating an expression.
+# The request will be treated as a Java regular expression.
+# The response must be a hex string, that means only characters
+# from 0-9 and A-F are allowed.
+
+###############################
+# Service 0x10                #
+###############################
+
+10 01 : 50 01 00 32 01 F4
+50 02 : 50 02 00 32 01 F4
+10 03 : 50 03 00 32 01 F4
+10 \w\w : 7F 10 10
+
+###############################
+# Service 0x3E                #
+###############################
+
+3E 00 : 7E 00
