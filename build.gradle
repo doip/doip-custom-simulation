@@ -5,7 +5,6 @@ plugins {
 	id 'eclipse'
 }
 
-group = 'com.github.doip'
 version = '1.1.0'
 
 repositories {
@@ -14,11 +13,11 @@ repositories {
 }
 
 dependencies {
-	implementation 'com.github.doip:doip-simulation:1.1.0'
-	implementation 'com.github.doip:doip-library:1.1.0'
-	implementation 'com.github.doip:doip-logging:1.1.5'
+	implementation 'com.github.doip:doip-simulation:1.2.0'
+	implementation 'com.github.doip:doip-library:1.1.1'
+	implementation 'com.github.doip:doip-logging:1.1.7'
 
-	testImplementation 'com.github.doip:doip-junit:1.0.8'
+	testImplementation 'com.github.doip:doip-junit:1.0.9'
 	testImplementation 'junit:junit:4.12'
 }
 
