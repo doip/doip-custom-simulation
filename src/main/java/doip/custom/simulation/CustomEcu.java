@@ -11,7 +11,7 @@ public class CustomEcu extends StandardEcu {
 	}
 
 	@Override
-	public boolean processUdsMessageByFunction(UdsMessage udsRequest) {
+	public boolean processRequestBeforeLookupTable(UdsMessage udsRequest) {
 		// Here you can add some special handling for a UDS message
 		// before the message will be handled by searching patterns
 		// in the lookup table.
@@ -24,12 +24,11 @@ public class CustomEcu extends StandardEcu {
 	}
 
 	@Override
-	public boolean processUdsMessageByMessageInterpretation(UdsMessage request) {
+	public boolean processRequestAfterLookupTable(UdsMessage request) {
 		// If a message was not handled by the lookup table then message 
 		// processing will be handled within this function. 
 		
 		// Default handling will be to send negative response with NRC 0x10
-		return super.processUdsMessageByMessageInterpretation(request);
+		return super.processRequestAfterLookupTable(request);
 	}
-
 }
