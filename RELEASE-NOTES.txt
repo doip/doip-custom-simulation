@@ -16,6 +16,20 @@ https://github.com/doip/doip-custom-simulation.git
 
 ==============================================================================
 
+                     Release Notes for Version: 1.1.5
+                     
+NEW FEATURES
+============
+
+- Issue #13:    Integration of new doip-simulation-1.4.0. See release notes
+                from doip-simulation-1.4.0
+                
+- Issue #14:    Adapt simulation files. The simulation will be tested
+                within the project doip-tester. Therefore the simulation
+                files need to match the expected result in the doip-tester.
+                     
+==============================================================================
+
                      Release Notes for Version: 1.1.4
 
 NEW FEATURES
