@@ -13,11 +13,11 @@ repositories {
 }
 
 dependencies {
-	implementation 'com.github.doip:doip-simulation:1.4.0'
+	implementation 'com.github.doip:doip-simulation:1.4.1'
 	implementation 'com.github.doip:doip-library:1.1.5'
 	implementation 'com.github.doip:doip-logging:1.1.7'
 
-	testImplementation 'com.github.doip:doip-junit:1.0.10'
+	testImplementation 'com.github.doip:doip-junit:1.0.11'
 	testImplementation 'junit:junit:4.12'
 }
 
