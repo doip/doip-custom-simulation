@@ -21,6 +21,9 @@ https://github.com/doip/doip-custom-simulation.git
 NEW FEATURES
 ============
 
+- Issue #18:    Update reference to doip-simulation-1.4.1 and 
+                doip-junit-1.0.11
+
 - Issue #13:    Integration of new doip-simulation-1.4.0. See release notes
                 from doip-simulation-1.4.0
                 
