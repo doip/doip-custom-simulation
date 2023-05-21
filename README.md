@@ -41,8 +41,6 @@ simulation and its dependencies. In addition all files which are located in
 the folder src/main/dist will also be added to the distribution.
 
 # Open Issues
-* The simulation does not yet send the vehicle announcement message at
-  startup
 * The settings for maxByteArraySizeLogging and maxByteArraySizeLookup are
   not yet used everywhere in the code
 * There are still some TODOs in the source code. Please check source code

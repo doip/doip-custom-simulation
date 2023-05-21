@@ -19,6 +19,7 @@ public class Main {
 			System.out.println("    ./start.sh gateway.properties");
 			System.exit(1);
 		}
+
 		System.out.println("Starting DoIP simulation ...");
 
 		GatewayConfig config = new GatewayConfig();
