@@ -1,16 +1,16 @@
 package doip.custom.simulation;
 
-import static doip.junit.Assert.*;
+import static doip.junit.Assertions.*;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.AfterEach;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.Test;
 
-import doip.logging.LogManager;
-import doip.logging.Logger;
-
+import doip.junit.Assertions;
 
 /**
  * Template class for unit tests using junit.
@@ -21,7 +21,7 @@ public class TestTemplate {
 
 	private static Logger logger = LogManager.getLogger(TestTemplate.class);
 
-	@BeforeClass
+	@BeforeAll
 	public static void setUpBeforeClass() throws Exception {
 		logger.info("-----------------------------------------------------------------------------");
 		logger.info(">>> public static void setUpBeforeClass()");
@@ -32,7 +32,7 @@ public class TestTemplate {
 		logger.info("-----------------------------------------------------------------------------");
 	}
 
-	@AfterClass
+	@AfterAll
 	public static void tearDownAfterClass() throws Exception {
 		logger.info("-----------------------------------------------------------------------------");
 		logger.info(">>> public static void tearDownAfterClass()");
@@ -43,7 +43,7 @@ public class TestTemplate {
 		logger.info("-----------------------------------------------------------------------------");
 	}
 
-	@Before
+	@BeforeEach
 	public void setUp() throws Exception {
 		logger.info("-----------------------------------------------------------------------------");
 		logger.info(">>> public void setUp()");
@@ -54,7 +54,7 @@ public class TestTemplate {
 		logger.info("-----------------------------------------------------------------------------");
 	}
 
-	@After
+	@AfterEach
 	public void tearDown() throws Exception {
 		logger.info("-----------------------------------------------------------------------------");
 		logger.info(">>> public void tearDown()");

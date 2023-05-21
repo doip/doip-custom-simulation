@@ -1,24 +1,26 @@
 plugins {
 	id 'java-library'
+	id 'jacoco'
 	id 'distribution'
-	id 'maven'
 	id 'eclipse'
 }
 
-version = '1.1.5'
+version = '1.2.0'
 
 repositories {
-	jcenter()
+	mavenCentral()
 	maven { url 'https://jitpack.io' }
 }
 
 dependencies {
-	implementation 'com.github.doip:doip-simulation:1.4.1'
-	implementation 'com.github.doip:doip-library:1.1.5'
-	implementation 'com.github.doip:doip-logging:1.1.7'
+	implementation group: 'org.apache.logging.log4j', name: 'log4j-api',  version: '2.19.0'
+	implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.19.0'
 
-	testImplementation 'com.github.doip:doip-junit:1.0.11'
-	testImplementation 'junit:junit:4.12'
+	implementation 'com.github.doip:doip-simulation:1.5.1'
+	implementation 'com.github.doip:doip-library:1.1.5'
+
+	testImplementation 'com.github.doip:doip-junit:1.2.0'
+	testImplementation 'org.junit.jupiter:junit-jupiter:5.7.1'
 }
 
 jar {
@@ -28,6 +30,11 @@ jar {
 			'Class-Path' : configurations.runtimeClasspath.collect { it.getName() }.join(' ')
 		)
 	}
+}
+
+test {
+	useJUnitPlatform()
+	systemProperty 'log4j.configurationFile', 'src/main/dist/log4j2.xml'
 }
 
 distributions {
