@@ -35,7 +35,5 @@ public class Main {
 
 		gateway.stop();
 		System.out.println("... DoIP simulation finished.");
-	
 	}
-
 }
