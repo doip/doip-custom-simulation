@@ -1,24 +1,24 @@
 plugins {
 	id 'java-library'
 	id 'distribution'
-	id 'maven'
 	id 'eclipse'
 }
 
-version = '1.1.5'
+group = 'com.github.com'
+version = '1.2.0'
 
 repositories {
-	jcenter()
+	mavenCentral()
 	maven { url 'https://jitpack.io' }
 }
 
 dependencies {
-	implementation 'com.github.doip:doip-simulation:1.4.1'
-	implementation 'com.github.doip:doip-library:1.1.5'
-	implementation 'com.github.doip:doip-logging:1.1.7'
+	implementation 'com.github.doip:doip-simulation:1.5.0'
+	implementation 'com.github.doip:doip-library:1.2.0'
+	implementation 'com.github.doip:doip-logging:1.2.0'
 
-	testImplementation 'com.github.doip:doip-junit:1.0.11'
-	testImplementation 'junit:junit:4.12'
+	testImplementation 'com.github.doip:doip-junit:1.1.1'
+	testImplementation 'org.junit.jupiter:junit-jupiter:5.7.1'
 }
 
 jar {
