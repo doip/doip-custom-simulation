@@ -21,7 +21,7 @@ https://github.com/doip/doip-custom-simulation.git
 CHANGES
 =======
 
-- Issue #25:    Update to gradle 8.1.1, update dependencies
+- Issue #25:    Update to newer versins of dependencies
 
 - Issue #23:    Fixed building problem
 

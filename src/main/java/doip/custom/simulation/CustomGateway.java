@@ -15,5 +15,4 @@ public class CustomGateway extends StandardGateway {
 	public StandardEcu createEcu(EcuConfig config) {
 		return new CustomEcu(config);
 	}
-
 }
