@@ -2,6 +2,7 @@ plugins {
 	id 'java-library'
 	id 'jacoco'
 	id 'distribution'
+	id 'application'
 	id 'eclipse'
 }
 
@@ -48,6 +49,12 @@ distributions {
 			}
 		}
 	}
+}
+
+application {
+	mainClass = 'doip.custom.simulation.Main'
+	applicationDefaultJvmArgs = ['-Dlog4jConfigurationFile="src/main/dist/log4j2.xml"']
+
 }
 
 
