@@ -1,7 +1,5 @@
 package doip.custom.simulation;
 
-import static doip.junit.Assertions.*;
-
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.AfterEach;
@@ -10,7 +8,7 @@ import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Test;
 
-import doip.junit.Assertions;
+import static com.starcode88.jtest.Assertions.*;
 
 /**
  * Template class for unit tests using junit.

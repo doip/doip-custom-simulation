@@ -21,7 +21,7 @@ dependencies {
 	implementation 'com.github.doip:doip-simulation:2.0.0'
 	implementation 'com.github.doip:doip-library:2.0.0'
 
-	testImplementation 'com.github.doip:doip-junit:2.0.0'
+	testImplementation 'com.github.starcode88:starcode88-jtest:2.0.0'
 
 	testImplementation 'org.junit.jupiter:junit-jupiter:5.7.1'
 }

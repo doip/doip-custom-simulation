@@ -5,13 +5,14 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.LinkedList;
 
+import doip.library.exception.DoipException;
 import doip.library.properties.EmptyPropertyValue;
 import doip.library.properties.MissingProperty;
 import doip.simulation.nodes.GatewayConfig;
 
 public class Main {
 
-	public static void main(String[] args) throws IOException, MissingProperty, EmptyPropertyValue {
+	public static void main(String[] args) throws DoipException, MissingProperty, EmptyPropertyValue, IOException {
 		
 		boolean interactive = false;
 		LinkedList<String> propertyFiles = new LinkedList<String>();
