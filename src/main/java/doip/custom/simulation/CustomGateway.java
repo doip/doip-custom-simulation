@@ -1,7 +1,7 @@
 package doip.custom.simulation;
 
-import doip.simulation.nodes.EcuConfig;
-import doip.simulation.nodes.GatewayConfig;
+import doip.simulation.EcuConfig;
+import doip.simulation.GatewayConfig;
 import doip.simulation.standard.StandardEcu;
 import doip.simulation.standard.StandardGateway;
 

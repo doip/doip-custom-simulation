@@ -8,7 +8,7 @@ import java.util.LinkedList;
 import doip.library.exception.DoipException;
 import doip.library.properties.EmptyPropertyValue;
 import doip.library.properties.MissingProperty;
-import doip.simulation.nodes.GatewayConfig;
+import doip.simulation.GatewayConfig;
 
 public class Main {
 
