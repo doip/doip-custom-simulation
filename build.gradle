@@ -1,8 +1,9 @@
+// doip-custom-simulation
+
 plugins {
 	id 'java-library'
 	id 'jacoco'
 	id 'distribution'
-	id 'application'
 	id 'eclipse'
 }
 
@@ -18,10 +19,11 @@ dependencies {
 	implementation group: 'org.apache.logging.log4j', name: 'log4j-api',  version: '2.19.0'
 	implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.19.0'
 
+	implementation 'com.github.doip:doip-simulation-api:1.1.0'
 	implementation 'com.github.doip:doip-simulation:2.0.0'
 	implementation 'com.github.doip:doip-library:2.0.0'
 
-	testImplementation 'com.github.starcode88:starcode88-jtest:2.0.0'
+	testImplementation 'com.github.starcode88:starcode88-jtest:1.2.1'
 
 	testImplementation 'org.junit.jupiter:junit-jupiter:5.7.1'
 }
@@ -38,7 +40,14 @@ jar {
 test {
 	useJUnitPlatform()
 	systemProperty 'log4j.configurationFile', 'src/main/dist/log4j2.xml'
+	reports {
+		junitXml {
+			outputPerTestCase = true // defaults to false
+			//mergeReruns = true // defaults to false
+		}
+    }
 }
+
 
 distributions {
 	main {
@@ -50,11 +59,3 @@ distributions {
 		}
 	}
 }
-
-application {
-	mainClass = 'doip.custom.simulation.Main'
-	applicationDefaultJvmArgs = ['-Dlog4jConfigurationFile="src/main/dist/log4j2.xml"']
-
-}
-
-
