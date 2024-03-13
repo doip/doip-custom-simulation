@@ -8,8 +8,6 @@ import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Test;
 
-import static com.starcode88.jtest.Assertions.*;
-
 /**
  * Template class for unit tests using junit.
  * It is required that the Java system property "log4j.configurationFile" needs to be set,
